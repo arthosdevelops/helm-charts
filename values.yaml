@@ -23,6 +23,11 @@ server:
     repository: temporalio/server
     tag: 1.18.5
     pullPolicy: IfNotPresent
+  
+  # securityContext for the temporal containers
+  securityContext:
+    fsGroup: 1000
+    runAsUser: 1000
 
   # Global default settings (can be overridden per service)
   replicaCount: 1
