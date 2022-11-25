@@ -47,7 +47,7 @@ spec:
       {{ include "temporal.serviceAccount" $ }}
       {{- if or $.Values.cassandra.enabled (or $.Values.elasticsearch.enabled $.Values.elasticsearch.external)}}
       {{- if semverCompare ">=1.13.0" $.Chart.AppVersion}}
-      securityContext:
+      securityContextdsafa:
         {{- toYaml .Values.server.securityContext | nindent 10 }}
       {{- end }}
       initContainers:
